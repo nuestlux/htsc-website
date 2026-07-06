@@ -1,0 +1,24 @@
+{
+  "name": "portable-skills-pack",
+  "version": "1.0.0",
+  "description": "Portable, reusable SKILL.md files for use across agent extensions (Claude, OpenCode, etc.)",
+  "license": "MIT",
+  "skills": [
+    {
+      "name": "ck:template-skill",
+      "path": ".claude/skills/template-skill/SKILL.md",
+      "description": "Starter template for new portable skills",
+      "category": "dev-tools",
+      "keywords": ["template", "starter", "portable"]
+    },
+    {
+      "name": "ck:skill-development",
+      "path": ".claude/skills/skill-development/SKILL.md",
+      "description": "Guide to create high-quality, discoverable, reusable SKILL.md files",
+      "category": "dev-tools",
+      "keywords": ["skill", "creation", "portable", "extension"]
+    }
+  ],
+  "schema": ".claude/schemas/skill-schema.json",
+  "instructions": "Copy any skill folder into your agent's skills directory (e.g. .claude/skills/ or .opencode/skills/). The SKILL.md frontmatter enables discovery and validation by other tools."
+}

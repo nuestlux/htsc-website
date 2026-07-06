@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tin tức HTSC</title>
+  <meta name="description" content="Tin tức và hoạt động nổi bật của HTSC.">
+  <link rel="icon" href="https://htsc.vn/wp-content/uploads/2021/10/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Bỏ qua điều hướng</a>
+  <header class="site-header">
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="HTSC trang chủ">
+        <span class="brand-mark">
+          <img class="brand-logo" src="https://htsc.vn/wp-content/uploads/2021/10/logo.svg" alt="HTSC">
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name">HTSC</span>
+          <span class="brand-subtitle">Giải pháp Công nghệ</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a class="" href="index.html">Trang chủ</a>
+        <div class="nav-item">
+          <button class="mega-trigger " type="button">
+            Giải pháp <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="mega-menu">
+            <div class="mega-grid">
+              <div class="mega-column">
+                <span class="mega-title">Nhóm giải pháp</span>
+                <a href="solutions.html#security">An ninh - An toàn thông tin</a><a href="solutions.html#digital">Chuyển đổi số</a><a href="solutions.html#smartcity">Thành phố thông minh</a><a href="solutions.html#iot">IoT</a>
+              </div>
+              <div class="mega-column">
+                <span class="mega-title">Sản phẩm nổi bật</span>
+                <a href="solution-detail.html">HVideo</a><a href="solution-detail.html">Smart Fusion</a><a href="solution-detail.html">Thiết bị định vị vệ tinh - Themis</a><a href="solution-detail.html">Hệ thống quản lý và phát triển nhân sự - Humania</a><a href="solution-detail.html">Phần mềm quản lý hoá chất, chất chuẩn - HCMS AG</a>
+              </div>
+              <div class="mega-column">
+                <span class="mega-title">Đi nhanh</span>
+                <a href="solutions.html">Tất cả giải pháp</a>
+                <a href="about.html">Năng lực công nghệ</a>
+                <a href="contact.html">Yêu cầu tư vấn</a>
+              </div>
+              <div class="mega-image">
+                Bố cục enterprise gateway: chọn nhóm giải pháp, xem năng lực, rồi chuyển sang tư vấn.
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="active" href="news.html">Tin tức</a><a class="" href="about.html">Giới thiệu</a><a class="" href="careers.html">Tuyển dụng</a><a class="" href="contact.html">Liên hệ</a>
+      </nav>
+
+      <div class="header-actions">
+        <form class="site-search" role="search">
+          <label class="search-control">
+            <i data-lucide="search"></i>
+            <span class="sr-only">Tìm kiếm</span>
+            <input type="search" name="q" aria-label="Tìm kiếm toàn site" placeholder="Tìm sản phẩm, tin, việc">
+          </label>
+          <div class="search-results" role="listbox"></div>
+        </form>
+        <select class="language-switcher" aria-label="Chọn ngôn ngữ">
+          <option value="vi">VI</option>
+          <option value="en">EN</option>
+        </select>
+        <a class="cta" href="contact.html">
+          <i data-lucide="send"></i>Tư vấn
+        </a>
+      </div>
+    </div>
+  </header>
+  <main id="main-content" class="page-main">
+
+    
+    <section class="page-hero grid-lines">
+      <div class="container page-hero-grid">
+        <div class="section-title">
+          
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Trang chủ</a><span>/</span><span aria-current="page">Tin tức</span>
+    </nav>
+          <span class="section-number">01</span>
+          <span class="eyebrow">Tin tức</span>
+          <h1>Hoạt động, sự kiện và giải thưởng HTSC.</h1>
+          <p>Tổng hợp các hoạt động, sự kiện và dấu mốc đáng chú ý của HTSC.</p>
+          
+        </div>
+        <img class="page-hero-image" src="https://htsc.vn/wp-content/uploads/2021/10/banner-htsc-1.png" alt="Hoạt động, sự kiện và giải thưởng HTSC." loading="lazy">
+      </div>
+    </section>
+    <section class="section">
+      <div class="container" data-listing>
+        
+    <div class="listing-toolbar">
+      <div>
+        <span class="toolbar-label">Bộ lọc tin tức</span>
+        <strong data-result-count>6 tin</strong>
+      </div>
+      <div class="listing-actions">
+        <label class="inline-search" for="news-search">
+          <i data-lucide="search"></i>
+          <span class="sr-only">Tìm nhanh</span>
+          <input id="news-search" type="search" data-list-search placeholder="Tìm sự kiện, giải thưởng...">
+        </label>
+        
+        <button class="btn-ghost" type="button" data-reset-filters><i data-lucide="rotate-ccw"></i>Xóa lọc</button>
+      </div>
+    </div>
+        <div class="job-filter" data-category-filter=".news-card">
+          <button class="category-button is-active" type="button" data-category="all">Tất cả</button>
+          <button class="category-button" type="button" data-category="event">Sự kiện</button>
+          <button class="category-button" type="button" data-category="company">Công ty</button>
+          <button class="category-button" type="button" data-category="award">Giải thưởng</button>
+        </div>
+        <div class="news-grid">
+    <article class="news-card reveal" style="--reveal-index: 0;" data-card-item data-category="event" data-title="HTSC giới thiệu giải pháp AI trong giám sát an ninh tại hội thảo cùng Motorola Solutions và HTI Group" data-summary="HTSC xuất hiện trong hội thảo về hệ sinh thái giám sát thông minh, nhấn mạnh vai trò AI trong an ninh." data-keywords="HTSC giới thiệu giải pháp AI trong giám sát an ninh tại hội thảo cùng Motorola Solutions và HTI Group Sự kiện 07/08/2025 HTSC xuất hiện trong hội thảo về hệ sinh thái giám sát thông minh, nhấn mạnh vai trò AI trong an ninh.">
+      <img src="https://htsc.vn/wp-content/uploads/2021/10/banner-htsc-1.png" alt="HTSC giới thiệu giải pháp AI trong giám sát an ninh tại hội thảo cùng Motorola Solutions và HTI Group" loading="lazy">
+      <div class="news-card-body">
+        <span class="card-index">01</span>
+        <div class="meta-row"><span class="meta">Sự kiện</span><span class="meta">07/08/2025</span></div>
+        <h3>HTSC giới thiệu giải pháp AI trong giám sát an ninh tại hội thảo cùng Motorola Solutions và HTI Group</h3>
+        <p>HTSC xuất hiện trong hội thảo về hệ sinh thái giám sát thông minh, nhấn mạnh vai trò AI trong an ninh.</p>
+        <div class="hero-actions">
+          <a class="btn-ghost" href="news-detail.html"><i data-lucide="book-open"></i>Chi tiết</a>
+        </div>
+      </div>
+    </article>
+    <article class="news-card reveal" style="--reveal-index: 1;" data-card-item data-category="event" data-title="Diễn đàn Cấp cao Chuyển đổi số Việt Nam - Châu Á 2025" data-summary="Sự kiện chuyển đổi số quy mô lớn tại Trung tâm Hội nghị Quốc gia với chủ đề làm chủ công nghệ." data-keywords="Diễn đàn Cấp cao Chuyển đổi số Việt Nam - Châu Á 2025 Sự kiện 27-28/05/2025 Sự kiện chuyển đổi số quy mô lớn tại Trung tâm Hội nghị Quốc gia với chủ đề làm chủ công nghệ.">
+      <img src="https://htsc.vn/wp-content/uploads/2021/10/Asset-1-100-min.jpg" alt="Diễn đàn Cấp cao Chuyển đổi số Việt Nam - Châu Á 2025" loading="lazy">
+      <div class="news-card-body">
+        <span class="card-index">02</span>
+        <div class="meta-row"><span class="meta">Sự kiện</span><span class="meta">27-28/05/2025</span></div>
+        <h3>Diễn đàn Cấp cao Chuyển đổi số Việt Nam - Châu Á 2025</h3>
+        <p>Sự kiện chuyển đổi số quy mô lớn tại Trung tâm Hội nghị Quốc gia với chủ đề làm chủ công nghệ.</p>
+        <div class="hero-actions">
+          <a class="btn-ghost" href="news-detail.html"><i data-lucide="book-open"></i>Chi tiết</a>
+        </div>
+      </div>
+    </article>
+    <article class="news-card reveal" style="--reveal-index: 2;" data-card-item data-category="company" data-title="Kỷ niệm 3 năm thành lập HTSC: 21/10/2021 - 21/10/2024" data-summary="HTI Group tổ chức lễ kỷ niệm dấu mốc 3 năm của HTSC và 1 năm HTI Scientific." data-keywords="Kỷ niệm 3 năm thành lập HTSC: 21/10/2021 - 21/10/2024 Công ty 18/10/2024 HTI Group tổ chức lễ kỷ niệm dấu mốc 3 năm của HTSC và 1 năm HTI Scientific.">
+      <img src="https://htsc.vn/wp-content/uploads/2021/10/logo-htsc-social-1.jpg" alt="Kỷ niệm 3 năm thành lập HTSC: 21/10/2021 - 21/10/2024" loading="lazy">
+      <div class="news-card-body">
+        <span class="card-index">03</span>
+        <div class="meta-row"><span class="meta">Công ty</span><span class="meta">18/10/2024</span></div>
+        <h3>Kỷ niệm 3 năm thành lập HTSC: 21/10/2021 - 21/10/2024</h3>
+        <p>HTI Group tổ chức lễ kỷ niệm dấu mốc 3 năm của HTSC và 1 năm HTI Scientific.</p>
+        <div class="hero-actions">
+          <a class="btn-ghost" href="news-detail.html"><i data-lucide="book-open"></i>Chi tiết</a>
+        </div>
+      </div>
+    </article>
+    <article class="news-card reveal" style="--reveal-index: 3;" data-card-item data-category="event" data-title="HTSC ứng dụng AI tại Smart City Asia 2024" data-summary="HTSC giới thiệu các giải pháp ứng dụng AI cho đô thị thông minh tại triển lãm Smart City Asia 2024." data-keywords="HTSC ứng dụng AI tại Smart City Asia 2024 Sự kiện 17-19/04/2024 HTSC giới thiệu các giải pháp ứng dụng AI cho đô thị thông minh tại triển lãm Smart City Asia 2024.">
+      <img src="https://htsc.vn/wp-content/uploads/2022/05/hti-he-thong-giam-sat-cong-truong-tu-dong.png" alt="HTSC ứng dụng AI tại Smart City Asia 2024" loading="lazy">
+      <div class="news-card-body">
+        <span class="card-index">04</span>
+        <div class="meta-row"><span class="meta">Sự kiện</span><span class="meta">17-19/04/2024</span></div>
+        <h3>HTSC ứng dụng AI tại Smart City Asia 2024</h3>
+        <p>HTSC giới thiệu các giải pháp ứng dụng AI cho đô thị thông minh tại triển lãm Smart City Asia 2024.</p>
+        <div class="hero-actions">
+          <a class="btn-ghost" href="news-detail.html"><i data-lucide="book-open"></i>Chi tiết</a>
+        </div>
+      </div>
+    </article>
+    <article class="news-card reveal" style="--reveal-index: 4;" data-card-item data-category="award" data-title="HTSC xuất sắc đạt giải thưởng Top 10 Doanh nghiệp Công nghệ số xuất sắc Việt Nam 2023" data-summary="HTSC được VINASA công bố trong nhóm Top 10 ICT Việt Nam 2023." data-keywords="HTSC xuất sắc đạt giải thưởng Top 10 Doanh nghiệp Công nghệ số xuất sắc Việt Nam 2023 Giải thưởng 22/09/2023 HTSC được VINASA công bố trong nhóm Top 10 ICT Việt Nam 2023.">
+      <img src="https://htsc.vn/wp-content/uploads/2021/10/logo-htsc-social-1.jpg" alt="HTSC xuất sắc đạt giải thưởng Top 10 Doanh nghiệp Công nghệ số xuất sắc Việt Nam 2023" loading="lazy">
+      <div class="news-card-body">
+        <span class="card-index">05</span>
+        <div class="meta-row"><span class="meta">Giải thưởng</span><span class="meta">22/09/2023</span></div>
+        <h3>HTSC xuất sắc đạt giải thưởng Top 10 Doanh nghiệp Công nghệ số xuất sắc Việt Nam 2023</h3>
+        <p>HTSC được VINASA công bố trong nhóm Top 10 ICT Việt Nam 2023.</p>
+        <div class="hero-actions">
+          <a class="btn-ghost" href="news-detail.html"><i data-lucide="book-open"></i>Chi tiết</a>
+        </div>
+      </div>
+    </article>
+    <article class="news-card reveal" style="--reveal-index: 5;" data-card-item data-category="company" data-title="HTSC chính thức khai trương văn phòng mới" data-summary="HTSC khai trương văn phòng tại tầng 16 - VP2, tòa nhà Sun Square, 21 Lê Đức Thọ, Hà Nội." data-keywords="HTSC chính thức khai trương văn phòng mới Công ty 15/08/2023 HTSC khai trương văn phòng tại tầng 16 - VP2, tòa nhà Sun Square, 21 Lê Đức Thọ, Hà Nội.">
+      <img src="https://htsc.vn/wp-content/uploads/2021/10/asset-3-100-min-1.jpg" alt="HTSC chính thức khai trương văn phòng mới" loading="lazy">
+      <div class="news-card-body">
+        <span class="card-index">06</span>
+        <div class="meta-row"><span class="meta">Công ty</span><span class="meta">15/08/2023</span></div>
+        <h3>HTSC chính thức khai trương văn phòng mới</h3>
+        <p>HTSC khai trương văn phòng tại tầng 16 - VP2, tòa nhà Sun Square, 21 Lê Đức Thọ, Hà Nội.</p>
+        <div class="hero-actions">
+          <a class="btn-ghost" href="news-detail.html"><i data-lucide="book-open"></i>Chi tiết</a>
+        </div>
+      </div>
+    </article></div>
+        
+    <div class="empty-state" data-empty-state hidden>
+      <i data-lucide="search-x"></i>
+      <h3>Không có tin phù hợp</h3>
+      <p>Thử chọn lại chuyên mục hoặc dùng từ khóa khác.</p>
+    </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div>
+        <h2>HTSC</h2>
+        <p>Công ty Cổ phần Giải pháp Công nghệ HTSC. Hệ thống trình bày các nhóm giải pháp công nghệ cho an ninh, chuyển đổi số, đô thị thông minh và IoT.</p>
+      </div>
+      <div>
+        <h3>Giải pháp</h3>
+        <ul><li><a href="solutions.html#security">An toàn thông tin</a></li><li><a href="solutions.html#digital">Chuyển đổi số</a></li><li><a href="solutions.html#smartcity">Thành phố thông minh</a></li><li><a href="solutions.html#iot">IoT</a></li></ul>
+      </div>
+      <div>
+        <h3>Công ty</h3>
+        <ul>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="news.html">Tin tức</a></li>
+          <li><a href="careers.html">Tuyển dụng</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Liên hệ nhanh</h3>
+        <ul>
+          <li><a href="contact.html">Yêu cầu tư vấn</a></li>
+          <li><a href="careers.html">Cơ hội nghề nghiệp</a></li>
+          <li><a href="news.html">Tin tức hoạt động</a></li>
+          <li><a href="about.html">Năng lực công nghệ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kết nối</h3>
+        <ul>
+          <li><a href="mailto:contact@htsc.vn">contact@htsc.vn</a></li>
+          <li><a href="tel:+84931232159">093.123.2159</a></li>
+          <li><a href="contact.html">Sun Square, Hà Nội</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 HTSC.</span>
+      <span>Giải pháp Công nghệ.</span>
+    </div>
+  </footer>
+
+  <div class="floating-cta" aria-label="Liên hệ nhanh">
+    <a href="tel:+84931232159" aria-label="Gọi hotline"><i data-lucide="phone-call"></i></a>
+    <a href="contact.html" aria-label="Gửi liên hệ"><i data-lucide="message-circle"></i></a>
+  </div>
+
+  <button class="back-to-top" type="button" aria-label="Cuộn lên đầu trang">
+    <i data-lucide="arrow-up"></i>
+  </button>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

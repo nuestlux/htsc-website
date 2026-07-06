@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/skill-schema.json",
+  "title": "Reusable Skill Frontmatter",
+  "description": "Standardized schema for SKILL.md files that can be shared across extensions and projects",
+  "type": "object",
+  "required": ["name", "description", "when_to_use", "user-invocable"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "Unique skill identifier (use kebab-case, prefix with ck: or project: if needed)"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 600,
+      "description": "Concise one-sentence description of what the skill does and its value"
+    },
+    "when_to_use": {
+      "type": "string",
+      "maxLength": 1200,
+      "description": "When Claude should automatically invoke or recommend this skill"
+    },
+    "user-invocable": {
+      "type": "boolean",
+      "const": true,
+      "description": "Must be true so users and other extensions can explicitly call it"
+    },
+    "argument-hint": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "Short usage hint shown to users, e.g. '[task description] [--flag]'"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "ai-ml", "frontend", "backend", "infrastructure", "database",
+        "dev-tools", "multimedia", "frameworks", "security", "utilities", "other"
+      ]
+    },
+    "keywords": {
+      "type": "array",
+      "items": { "type": "string" },
+      "maxItems": 12,
+      "description": "Search keywords for discovery by other extensions"
+    },
+    "license": {
+      "type": "string",
+      "description": "SPDX or short license name (MIT recommended for reusability)"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "author": { "type": "string" },
+        "version": { "type": "string" },
+        "requires": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}
