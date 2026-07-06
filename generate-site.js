@@ -406,26 +406,30 @@ function header(active = "home") {
       </button>
 
       <nav class="main-nav" aria-label="Điều hướng chính">
-        <a class="${active === "index" ? "active" : ""}" href="index.html">Trang chủ</a>
+        <a class="${active === "index" ? "active" : ""}" href="index.html" data-nav-home>Trang chủ</a>
         <div class="nav-item">
-          <button class="mega-trigger ${active === "solutions" || active === "solution-detail" ? "active" : ""}" type="button">
+          <button class="mega-trigger ${active === "solutions" || active === "solution-detail" ? "active" : ""}" type="button" data-nav-solutions>
             Giải pháp ${icon("chevron-down")}
           </button>
           <div class="mega-menu">
             <div class="mega-grid">
               <div class="mega-column">
-                <span class="mega-title">Nhóm giải pháp</span>
-                ${categories.map((item) => `<a href="solutions.html#${item.id}">${esc(item.label)}</a>`).join("")}
+                <span class="mega-title" data-mega-groups>Nhóm giải pháp</span>
+                ${categories.map((item, i) => {
+                  const keys = ["security","digital","smartcity","iot"];
+                  const k = keys[i] || item.id;
+                  return `<a href="solutions.html#${item.id}" data-cat-${k}>${esc(item.label)}</a>`;
+                }).join("")}
               </div>
               <div class="mega-column">
-                <span class="mega-title">Sản phẩm nổi bật</span>
+                <span class="mega-title" data-mega-products>Sản phẩm nổi bật</span>
                 ${products.slice(0, 5).map((item) => `<a href="solution-detail.html">${esc(item.title)}</a>`).join("")}
               </div>
               <div class="mega-column">
-                <span class="mega-title">Đi nhanh</span>
-                <a href="solutions.html">Tất cả giải pháp</a>
-                <a href="about.html">Năng lực công nghệ</a>
-                <a href="contact.html">Yêu cầu tư vấn</a>
+                <span class="mega-title" data-mega-quick>Đi nhanh</span>
+                <a href="solutions.html" data-mega-all>Tất cả giải pháp</a>
+                <a href="about.html" data-mega-capabilities>Năng lực công nghệ</a>
+                <a href="contact.html" data-mega-consult>Yêu cầu tư vấn</a>
               </div>
               <div class="mega-image">
                 Bố cục enterprise gateway: chọn nhóm giải pháp, xem năng lực, rồi chuyển sang tư vấn.
@@ -433,7 +437,10 @@ function header(active = "home") {
             </div>
           </div>
         </div>
-        ${nav.slice(1).map(([id, label, href]) => `<a class="${active === id ? "active" : ""}" href="${href}">${label}</a>`).join("")}
+        ${nav.slice(1).map(([id, label, href]) => {
+          const dataAttr = id === "news" ? "data-nav-news" : id === "about" ? "data-nav-about" : id === "careers" ? "data-nav-careers" : id === "contact" ? "data-nav-contact" : "";
+          return `<a class="${active === id ? "active" : ""}" href="${href}" ${dataAttr}>${label}</a>`;
+        }).join("")}
       </nav>
 
       <div class="header-actions">
@@ -441,7 +448,7 @@ function header(active = "home") {
           <label class="search-control">
             ${icon("search")}
             <span class="sr-only">Tìm kiếm</span>
-            <input type="search" name="q" aria-label="Tìm kiếm toàn site" placeholder="Tìm sản phẩm, tin, việc">
+            <input type="search" name="q" aria-label="Tìm kiếm toàn site" placeholder="Tìm sản phẩm, tin, việc" data-search-placeholder>
           </label>
           <div class="search-results" role="listbox"></div>
         </form>
@@ -449,7 +456,7 @@ function header(active = "home") {
           <option value="vi">VI</option>
           <option value="en">EN</option>
         </select>
-        <a class="cta" href="contact.html">
+        <a class="cta" href="contact.html" data-cta-label>
           ${icon("send")}Tư vấn
         </a>
       </div>
@@ -466,29 +473,34 @@ function footer() {
         <p>${contact.company}. Hệ thống trình bày các nhóm giải pháp công nghệ cho an ninh, chuyển đổi số, đô thị thông minh và IoT.</p>
       </div>
       <div>
-        <h3>Giải pháp</h3>
-        <ul>${categories.map((item) => `<li><a href="solutions.html#${item.id}">${esc(item.short)}</a></li>`).join("")}</ul>
-      </div>
-      <div>
-        <h3>Công ty</h3>
+        <h3 data-footer-solutions>Giải pháp</h3>
         <ul>
-          <li><a href="about.html">Giới thiệu</a></li>
-          <li><a href="news.html">Tin tức</a></li>
-          <li><a href="careers.html">Tuyển dụng</a></li>
-          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="solutions.html#security" data-cat-security>An toàn thông tin</a></li>
+          <li><a href="solutions.html#digital" data-cat-digital>Chuyển đổi số</a></li>
+          <li><a href="solutions.html#smartcity" data-cat-smartcity>Thành phố thông minh</a></li>
+          <li><a href="solutions.html#iot" data-cat-iot>IoT</a></li>
         </ul>
       </div>
       <div>
-        <h3>Liên hệ nhanh</h3>
+        <h3 data-footer-company>Công ty</h3>
         <ul>
-          <li><a href="contact.html">Yêu cầu tư vấn</a></li>
-          <li><a href="careers.html">Cơ hội nghề nghiệp</a></li>
-          <li><a href="news.html">Tin tức hoạt động</a></li>
-          <li><a href="about.html">Năng lực công nghệ</a></li>
+          <li><a href="about.html" data-footer-about>Giới thiệu</a></li>
+          <li><a href="news.html" data-nav-news>Tin tức</a></li>
+          <li><a href="careers.html" data-nav-careers>Tuyển dụng</a></li>
+          <li><a href="contact.html" data-footer-contact>Liên hệ</a></li>
         </ul>
       </div>
       <div>
-        <h3>Kết nối</h3>
+        <h3 data-footer-quick>Liên hệ nhanh</h3>
+        <ul>
+          <li><a href="contact.html" data-footer-consult>Yêu cầu tư vấn</a></li>
+          <li><a href="careers.html" data-footer-jobs>Cơ hội nghề nghiệp</a></li>
+          <li><a href="news.html" data-footer-news>Tin tức hoạt động</a></li>
+          <li><a href="about.html" data-footer-tech>Năng lực công nghệ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-footer-connect>Kết nối</h3>
         <ul>
           <li><a href="mailto:${contact.email}">${contact.email}</a></li>
           <li><a href="tel:${contact.phoneHref}">${contact.phone}</a></li>
