@@ -1,24 +1,167 @@
-{
-  "name": "portable-skills-pack",
-  "version": "1.0.0",
-  "description": "Portable, reusable SKILL.md files for use across agent extensions (Claude, OpenCode, etc.)",
-  "license": "MIT",
-  "skills": [
-    {
-      "name": "ck:template-skill",
-      "path": ".claude/skills/template-skill/SKILL.md",
-      "description": "Starter template for new portable skills",
-      "category": "dev-tools",
-      "keywords": ["template", "starter", "portable"]
-    },
-    {
-      "name": "ck:skill-development",
-      "path": ".claude/skills/skill-development/SKILL.md",
-      "description": "Guide to create high-quality, discoverable, reusable SKILL.md files",
-      "category": "dev-tools",
-      "keywords": ["skill", "creation", "portable", "extension"]
-    }
-  ],
-  "schema": ".claude/schemas/skill-schema.json",
-  "instructions": "Copy any skill folder into your agent's skills directory (e.g. .claude/skills/ or .opencode/skills/). The SKILL.md frontmatter enables discovery and validation by other tools."
+﻿{
+    "version":  "1.1.0",
+    "count":  26,
+    "license":  "MIT",
+    "extracted_from":  "claude-skills-archive-2026-07",
+    "schema":  ".claude/schemas/skill-schema.json",
+    "name":  "web-htsc-portable-skills",
+    "description":  "High-value portable skills extracted from ClaudeKit archive + local templates (2026-07)",
+    "skills":  [
+                   {
+                       "name":  "ck:ai-artist",
+                       "path":  ".claude/skills/ai-artist/SKILL.md",
+                       "description":  "Generate product mockups, marketing assets, brand visuals, and concept art via Nano Banana with 129 curated prompts. Mandatory validation in",
+                       "category":  "ai-ml"
+                   },
+                   {
+                       "name":  "ck:ai-multimodal",
+                       "path":  ".claude/skills/ai-multimodal/SKILL.md",
+                       "description":  "Analyze images/audio/video with Gemini API (better vision than Claude). Generate images (Imagen 4, Nano Banana 2, MiniMax), videos (Veo 3, H",
+                       "category":  "ai-ml"
+                   },
+                   {
+                       "name":  "ck:backend-development",
+                       "path":  ".claude/skills/backend-development/SKILL.md",
+                       "description":  "Build backends with Node.js, Python, Go (NestJS, FastAPI, Django). Use for REST/GraphQL/gRPC APIs, auth (OAuth, JWT), databases, microservic",
+                       "category":  "backend"
+                   },
+                   {
+                       "name":  "ck:better-auth",
+                       "path":  ".claude/skills/better-auth/SKILL.md",
+                       "description":  "Add authentication with Better Auth (TypeScript). Use for email/password, OAuth providers (Google, GitHub), 2FA/MFA, passkeys/WebAuthn, sess",
+                       "category":  "backend"
+                   },
+                   {
+                       "name":  "brainstorming",
+                       "path":  ".claude/skills/brainstorming/SKILL.md",
+                       "description":  "Collaborative solution brainstorming with brutal honesty, multi-approach analysis, principle-driven recommendations. Use for ideation, archi",
+                       "category":  "other"
+                   },
+                   {
+                       "name":  "ck:chrome-devtools",
+                       "path":  ".claude/skills/chrome-devtools/SKILL.md",
+                       "description":  "Automate browsers with Puppeteer CLI scripts and persistent sessions. Use for screenshots, performance analysis, network monitoring, web scr",
+                       "category":  "other"
+                   },
+                   {
+                       "name":  "ck:code-review",
+                       "path":  ".claude/skills/code-review/SKILL.md",
+                       "description":  "Review code quality with adversarial rigor. Supports input modes: pending changes, PR number, commit hash, codebase scan. Always-on red-team",
+                       "category":  "utilities"
+                   },
+                   {
+                       "name":  "ck:databases",
+                       "path":  ".claude/skills/databases/SKILL.md",
+                       "description":  "Design schemas, write queries for MongoDB and PostgreSQL. Use for database design, SQL/NoSQL queries, aggregation pipelines, indexes, migrat",
+                       "category":  "database"
+                   },
+                   {
+                       "name":  "ck:devops",
+                       "path":  ".claude/skills/devops/SKILL.md",
+                       "description":  "Deploy to Cloudflare (Workers, R2, D1), Docker, GCP (Cloud Run, GKE), Kubernetes (kubectl, Helm). Use for serverless, containers, CI/CD, Git",
+                       "category":  "infrastructure"
+                   },
+                   {
+                       "name":  "ck:docs-seeker",
+                       "path":  ".claude/skills/docs-seeker/SKILL.md",
+                       "description":  "Search library/framework documentation via llms.txt (context7.com). Use for API docs, GitHub repository analysis, technical documentation lo",
+                       "category":  "dev-tools"
+                   },
+                   {
+                       "name":  "ck:frontend-design",
+                       "path":  ".claude/skills/frontend-design/SKILL.md",
+                       "description":  "Create polished frontend interfaces from designs/screenshots/videos. Use for web components, 3D experiences, replicating UI designs, quick p",
+                       "category":  "frontend"
+                   },
+                   {
+                       "name":  "ck:mcp-builder",
+                       "path":  ".claude/skills/mcp-builder/SKILL.md",
+                       "description":  "Build MCP servers for LLM-external service integration. Use for FastMCP (Python), MCP SDK (Node/TypeScript), tool design, API integration, r",
+                       "category":  "dev-tools"
+                   },
+                   {
+                       "name":  "ck:media-processing",
+                       "path":  ".claude/skills/media-processing/SKILL.md",
+                       "description":  "Process media with FFmpeg (video/audio), ImageMagick (images), RMBG (AI background removal). Use for encoding, format conversion, filters, t",
+                       "category":  "multimedia"
+                   },
+                   {
+                       "name":  "ck:mermaidjs-v11",
+                       "path":  ".claude/skills/mermaidjs-v11/SKILL.md",
+                       "description":  "Create diagrams with Mermaid.js v11 syntax. Use for flowcharts, sequence diagrams, class diagrams, ER diagrams, Gantt charts, state diagrams",
+                       "category":  "utilities"
+                   },
+                   {
+                       "name":  "ck:mobile-development",
+                       "path":  ".claude/skills/mobile-development/SKILL.md",
+                       "description":  "Build mobile apps with React Native, Flutter, Swift/SwiftUI, Kotlin/Jetpack Compose. Use for iOS/Android, mobile UX, performance optimizatio",
+                       "category":  "frameworks"
+                   },
+                   {
+                       "name":  "ck:payment-integration",
+                       "path":  ".claude/skills/payment-integration/SKILL.md",
+                       "description":  "Integrate payments with SePay (VietQR), Polar, Stripe, Paddle (MoR subscriptions), Creem.io (licensing). Checkout, webhooks, subscriptions, ",
+                       "category":  "backend"
+                   },
+                   {
+                       "name":  "planning",
+                       "path":  ".claude/skills/planning/SKILL.md",
+                       "description":  "Plan implementations, design architectures, create technical roadmaps with detailed phases. Use for feature planning, system design, solutio",
+                       "category":  "other"
+                   },
+                   {
+                       "name":  "ck:repomix",
+                       "path":  ".claude/skills/repomix/SKILL.md",
+                       "description":  "Pack repositories into AI-friendly files with Repomix (XML, Markdown, plain text). Use for new-project onboarding, codebase snapshots, LLM c",
+                       "category":  "dev-tools"
+                   },
+                   {
+                       "name":  "ck:research",
+                       "path":  ".claude/skills/research/SKILL.md",
+                       "description":  "Research technical solutions, analyze architectures, gather requirements thoroughly. Use for technology evaluation, best practices research,",
+                       "category":  "utilities"
+                   },
+                   {
+                       "name":  "ck:sequential-thinking",
+                       "path":  ".claude/skills/sequential-thinking/SKILL.md",
+                       "description":  "Apply step-by-step analysis for complex problems with revision capability. Use for multi-step reasoning, hypothesis verification, adaptive p",
+                       "category":  "utilities"
+                   },
+                   {
+                       "name":  "ck:shopify",
+                       "path":  ".claude/skills/shopify/SKILL.md",
+                       "description":  "Build Shopify apps, extensions, and themes with Shopify CLI, GraphQL Admin API, Polaris UI, Liquid, webhooks, billing, and app configuration",
+                       "category":  "frameworks"
+                   },
+                   {
+                       "name":  "ck:skill-development",
+                       "path":  ".claude/skills/skill-development/SKILL.md",
+                       "description":  "Guide for creating high-quality, reusable, portable SKILL.md files that other agent extensions and tools can discover, validate, and load.",
+                       "category":  "dev-tools"
+                   },
+                   {
+                       "name":  "ck:your-skill-name",
+                       "path":  ".claude/skills/template-skill/SKILL.md",
+                       "description":  "One clear sentence describing what this skill does and the value it provides. Make it searchable and actionable.",
+                       "category":  "dev-tools"
+                   },
+                   {
+                       "name":  "ck:threejs",
+                       "path":  ".claude/skills/threejs/SKILL.md",
+                       "description":  "Build 3D web experiences with Three.js. Use for WebGL/WebGPU scenes, GLTF models, animations, physics, VR/XR. Supports 556 searchable exampl",
+                       "category":  "frontend"
+                   },
+                   {
+                       "name":  "ck:ui-styling",
+                       "path":  ".claude/skills/ui-styling/SKILL.md",
+                       "description":  "Style UIs with shadcn/ui components (Radix UI + Tailwind CSS). Use for accessible components, themes, dark mode, responsive layouts, design ",
+                       "category":  "frontend"
+                   },
+                   {
+                       "name":  "ck:web-frameworks",
+                       "path":  ".claude/skills/web-frameworks/SKILL.md",
+                       "description":  "Build with Next.js (App Router, RSC, SSR, ISR), Turborepo monorepos. Use for React apps, server rendering, build optimization, caching strat",
+                       "category":  "frameworks"
+                   }
+               ]
 }
