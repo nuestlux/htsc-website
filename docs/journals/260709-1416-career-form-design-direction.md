@@ -31,3 +31,7 @@ The approved direction was implemented on the career detail quick-apply card. Th
 ## Remaining Boundary
 
 Because the project is a static site, real application delivery still needs a selected endpoint or form service.
+
+## Dark Mode Fix
+
+The quick-apply card received dark-theme-specific surface, text, input, placeholder, and focus colors after visual review showed that light-mode card styling was leaking into dark mode and reducing contrast.

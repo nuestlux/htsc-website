@@ -1768,6 +1768,49 @@ html[data-theme="dark"] .page-hero-image {
   line-height: 1.5;
 }
 
+html[data-theme="dark"] .side-box.side-box--apply {
+  background:
+    radial-gradient(circle at top right, rgba(255, 189, 63, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(13, 28, 48, 0.98), rgba(5, 14, 26, 0.98));
+  border-color: rgba(159, 210, 255, 0.22);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.32);
+}
+
+html[data-theme="dark"] .form-panel--apply {
+  background: linear-gradient(180deg, rgba(13, 28, 48, 0.96), rgba(7, 17, 31, 0.98));
+  border-color: rgba(159, 210, 255, 0.2);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="dark"] .quick-apply-header h3,
+html[data-theme="dark"] .form-panel--apply .form-field label {
+  color: var(--text);
+}
+
+html[data-theme="dark"] .quick-apply-header p,
+html[data-theme="dark"] .quick-apply-note,
+html[data-theme="dark"] .form-panel--apply .form-field label span {
+  color: var(--text-muted);
+}
+
+html[data-theme="dark"] .form-panel--apply .form-field input,
+html[data-theme="dark"] .form-panel--apply .form-field textarea {
+  color: var(--text);
+  background: rgba(3, 11, 20, 0.9);
+  border-color: rgba(159, 210, 255, 0.24);
+}
+
+html[data-theme="dark"] .form-panel--apply .form-field input::placeholder,
+html[data-theme="dark"] .form-panel--apply .form-field textarea::placeholder {
+  color: #9fb3c7;
+}
+
+html[data-theme="dark"] .form-panel--apply .form-field input:focus,
+html[data-theme="dark"] .form-panel--apply .form-field textarea:focus {
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 4px rgba(85, 169, 239, 0.18);
+}
+
 .map-frame {
   width: 100%;
   min-height: 360px;
