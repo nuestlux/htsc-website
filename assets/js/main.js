@@ -124,6 +124,19 @@
       "form.err.required": "Vui lòng nhập thông tin.",
       "form.err.email": "Email chưa đúng định dạng.",
       "form.err.phone": "Số điện thoại chưa đúng định dạng.",
+      "careers.apply.eyebrow": "Ứng tuyển",
+      "careers.apply.title": "Nộp hồ sơ nhanh",
+      "careers.apply.desc": "Điền thông tin cơ bản, HTSC sẽ liên hệ lại để trao đổi chi tiết.",
+      "apply.name": "Họ tên",
+      "apply.name.placeholder": "Nguyễn Văn A",
+      "apply.email": "Email",
+      "apply.email.placeholder": "ban@congty.com",
+      "apply.phone": "Điện thoại",
+      "apply.phone.placeholder": "090 123 4567",
+      "apply.note.optional": "Ghi chú (tuỳ chọn)",
+      "apply.note.placeholder": "Kinh nghiệm hoặc vị trí bạn muốn tìm hiểu thêm",
+      "apply.submit": "Gửi ứng tuyển",
+      "apply.response": "Phản hồi qua email hoặc điện thoại bạn cung cấp.",
       "section.07.eyebrow": "Văn phòng",
       "section.07.title": "Tầng 16 - VP2, Tòa nhà Sun Square, số 21 đường Lê Đức Thọ, Phường Từ Liêm, Thành phố Hà Nội.",
       "section.07.desc": "Không gian làm việc và điểm kết nối trực tiếp của đội ngũ HTSC tại Hà Nội.",
@@ -317,12 +330,18 @@
       "careers.apply.title": "Submit application info.",
       "careers.apply.desc": "Quickly fill basic info to start conversation with recruiting team.",
       "apply.name": "Full name",
+      "apply.name.placeholder": "Your full name",
       "apply.phone": "Phone",
+      "apply.phone.placeholder": "+84 90 123 4567",
       "apply.email": "Email",
+      "apply.email.placeholder": "you@company.com",
       "apply.role": "Position of interest",
       "apply.role.placeholder": "Select position",
       "apply.note": "Note",
-      "apply.submit": "Submit info",
+      "apply.note.optional": "Note (optional)",
+      "apply.note.placeholder": "Experience or position you want to discuss",
+      "apply.submit": "Submit application",
+      "apply.response": "HTSC will respond via the email or phone number you provide.",
       "detail.consult.eyebrow": "Product consultation",
       "detail.consult.title": "Discuss product requirements.",
       "detail.consult.desc": "Fill requirements so HTSC team can discuss deeper about the problem and suitable solution.",
@@ -914,11 +933,11 @@
           const value = field.value.trim();
           let fieldError = "";
           if (!value) {
-            fieldError = "Vui lòng nhập thông tin.";
+            fieldError = t("form.err.required", currentLang);
           } else if (field.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-            fieldError = "Email chưa đúng định dạng.";
+            fieldError = t("form.err.email", currentLang);
           } else if (field.name && field.name.toLowerCase().includes("phone") && !/^[0-9+\-\s().]{8,18}$/.test(value)) {
-            fieldError = "Số điện thoại chưa đúng định dạng.";
+            fieldError = t("form.err.phone", currentLang);
           }
           if (fieldError) {
             isValid = false;
@@ -932,8 +951,8 @@
         if (message) {
           message.classList.toggle("is-success", isValid);
           message.textContent = isValid
-            ? "Đã ghi nhận thông tin. Đội ngũ HTSC sẽ phản hồi theo kênh liên hệ bạn cung cấp."
-            : "Vui lòng kiểm tra các trường được đánh dấu.";
+            ? t("form.success", currentLang)
+            : t("form.error", currentLang);
         }
         if (!isValid && firstInvalid) {
           firstInvalid.focus();
@@ -948,7 +967,7 @@
               submitButton.classList.remove("is-loading");
             }, 700);
           }
-          showToast("Đã gửi thông tin.");
+          showToast(t("form.success", currentLang));
         }
       });
     });

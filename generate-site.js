@@ -12,10 +12,10 @@ const official = {
 };
 
 const images = {
-  hero: "/assets/images/defense/command-center.jpg",
-  about: "/assets/images/defense/cyber-operations.jpg",
-  career: "/assets/images/defense/simulator.jpg",
-  news: "/assets/images/defense/zero-trust.jpg",
+  hero: "assets/images/defense/command-center.jpg",
+  about: "assets/images/defense/cyber-operations.jpg",
+  career: "assets/images/defense/simulator.jpg",
+  news: "assets/images/defense/zero-trust.jpg",
   logoSocial: "https://htsc.vn/wp-content/uploads/2021/10/logo-htsc-social-1.jpg"
 };
 
@@ -1245,16 +1245,21 @@ function careerDetailPage() {
           <p>Ứng viên có thể để lại thông tin để đội ngũ tuyển dụng kết nối và trao đổi thêm về vai trò phù hợp.</p>
         </article>
         <aside class="side-panel">
-          <div class="side-box">
-            <h3>Nộp hồ sơ nhanh</h3>
-            <form class="form-panel" data-validate novalidate>
+          <div class="side-box side-box--apply">
+            <div class="quick-apply-header">
+              <span class="quick-apply-kicker" data-i18n="careers.apply.eyebrow">Ứng tuyển</span>
+              <h3 data-i18n="careers.apply.title">Nộp hồ sơ nhanh</h3>
+              <p data-i18n="careers.apply.desc">Điền thông tin cơ bản, HTSC sẽ liên hệ lại để trao đổi chi tiết.</p>
+            </div>
+            <form class="form-panel form-panel--apply" data-validate novalidate>
               <div class="form-grid">
-                <div class="form-field full"><label for="candidate-name">Họ tên</label><input id="candidate-name" required autocomplete="name"><span class="field-error"></span></div>
-                <div class="form-field full"><label for="candidate-email">Email</label><input id="candidate-email" type="email" required autocomplete="email"><span class="field-error"></span></div>
-                <div class="form-field full"><label for="candidate-phone">Điện thoại</label><input id="candidate-phone" name="phone" required inputmode="tel"><span class="field-error"></span></div>
-                <div class="form-field full"><label for="candidate-note">Ghi chú</label><textarea id="candidate-note" required></textarea><span class="field-error"></span></div>
+                <div class="form-field full"><label for="candidate-name" data-i18n="apply.name">Họ tên</label><input id="candidate-name" required autocomplete="name" placeholder="Nguyễn Văn A" data-i18n="apply.name.placeholder"><span class="field-error"></span></div>
+                <div class="form-field full"><label for="candidate-email" data-i18n="apply.email">Email</label><input id="candidate-email" type="email" required autocomplete="email" placeholder="ban@congty.com" data-i18n="apply.email.placeholder"><span class="field-error"></span></div>
+                <div class="form-field full"><label for="candidate-phone" data-i18n="apply.phone">Điện thoại</label><input id="candidate-phone" name="phone" required inputmode="tel" placeholder="090 123 4567" data-i18n="apply.phone.placeholder"><span class="field-error"></span></div>
+                <div class="form-field full"><label for="candidate-note" data-i18n="apply.note.optional">Ghi chú (tuỳ chọn)</label><textarea id="candidate-note" placeholder="Kinh nghiệm hoặc vị trí bạn muốn tìm hiểu thêm" data-i18n="apply.note.placeholder"></textarea><span class="field-error"></span></div>
               </div>
-              <button class="btn" type="submit">${icon("send")}Gửi ứng tuyển</button>
+              <button class="btn quick-apply-submit" type="submit" data-i18n="apply.submit">${icon("send")}Gửi ứng tuyển</button>
+              <p class="quick-apply-note" data-i18n="apply.response">Phản hồi qua email hoặc điện thoại bạn cung cấp.</p>
               <div class="form-message" role="status"></div>
             </form>
           </div>
