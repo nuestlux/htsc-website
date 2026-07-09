@@ -363,6 +363,65 @@
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
   const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const themeKey = "htsc-theme";
+
+  function systemTheme() {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+
+  function currentTheme() {
+    return localStorage.getItem(themeKey) || systemTheme();
+  }
+
+  function updateThemeButtons(theme) {
+    $$("[data-theme-toggle]").forEach((button) => {
+      const isDark = theme === "dark";
+      button.setAttribute("aria-pressed", String(isDark));
+      button.setAttribute("aria-label", isDark ? "Chuyển sang giao diện sáng" : "Chuyển sang giao diện tối");
+      button.title = isDark ? "Giao diện sáng" : "Giao diện tối";
+    });
+  }
+
+  function applyTheme(theme, announce = false) {
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    updateThemeButtons(theme);
+    if (announce) showToast(theme === "dark" ? "Đã bật giao diện tối." : "Đã bật giao diện sáng.");
+  }
+
+  function createThemeButton() {
+    const button = document.createElement("button");
+    button.className = "theme-toggle";
+    button.type = "button";
+    button.dataset.themeToggle = "";
+    button.innerHTML =
+      '<span class="theme-icon theme-icon-sun" aria-hidden="true"><i data-lucide="sun"></i></span>' +
+      '<span class="theme-icon theme-icon-moon" aria-hidden="true"><i data-lucide="moon"></i></span>';
+    button.addEventListener("click", () => {
+      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      localStorage.setItem(themeKey, nextTheme);
+      applyTheme(nextTheme, true);
+      initIcons();
+    });
+    return button;
+  }
+
+  function initTheme() {
+    const theme = currentTheme();
+    applyTheme(theme);
+    $$(".header-actions").forEach((actions) => {
+      if ($("[data-theme-toggle]", actions)) return;
+      const button = createThemeButton();
+      const language = $(".language-switcher", actions);
+      actions.insertBefore(button, language || actions.firstChild);
+    });
+    updateThemeButtons(theme);
+    initIcons();
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    media.addEventListener("change", () => {
+      if (!localStorage.getItem(themeKey)) applyTheme(systemTheme());
+    });
+  }
 
   function escapeHtml(value) {
     return String(value)
@@ -918,6 +977,7 @@
     initScrollProgress();
     initMobileNav();
     initSearch();
+    initTheme();
     initLanguageSwitcher();
     initSliders();
     initTabs();
