@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="72" viewBox="0 0 260 72" role="img" aria-labelledby="title">
+  <title id="title">Smart City Asia</title>
+  <rect width="260" height="72" rx="0" fill="none"/>
+  <path d="M41 54V30h12v24zm18 0V18h12v36zm18 0V25h12v29z" fill="#1B75BB"/>
+  <path d="M35 54h62" stroke="#FAA819" stroke-width="4" stroke-linecap="square"/>
+  <text x="112" y="34" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="900" fill="#102033">Smart City</text>
+  <text x="112" y="53" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#1B75BB">Asia</text>
+</svg>

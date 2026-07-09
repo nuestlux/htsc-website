@@ -19,6 +19,17 @@ const images = {
   logoSocial: "https://htsc.vn/wp-content/uploads/2021/10/logo-htsc-social-1.jpg"
 };
 
+const ecosystemPartners = [
+  { name: "HTI Group", category: "Hệ sinh thái", logo: "assets/images/partners/hti-group.svg" },
+  { name: "Motorola Solutions", category: "Công nghệ", logo: "assets/images/partners/motorola-solutions.svg" },
+  { name: "N-TEK Distribution", category: "Phân phối", logo: "assets/images/partners/n-tek-distribution.svg" },
+  { name: "VINASA", category: "Hiệp hội", logo: "assets/images/partners/vinasa.svg" },
+  { name: "Smart City Asia", category: "Sự kiện", logo: "assets/images/partners/smart-city-asia.svg" },
+  { name: "Secutech", category: "Sự kiện", logo: "assets/images/partners/secutech.svg" },
+  { name: "BIDV", category: "Khách hàng", logo: "assets/images/partners/bidv.svg" },
+  { name: "Novaland", category: "Khách hàng", logo: "assets/images/partners/novaland.svg" }
+];
+
 const contact = {
   company: "Công ty Cổ phần Giải pháp Công nghệ HTSC",
   address: "Tầng 16 - VP2, Tòa nhà Sun Square, số 21 đường Lê Đức Thọ, Phường Từ Liêm, Thành phố Hà Nội",
@@ -706,16 +717,20 @@ function indexPage() {
       </div>
     </section>
 
-    <section class="section">
-      <div class="container logo-strip">
-        <div>
-          <span class="eyebrow">Hệ sinh thái</span>
-          <p class="prototype-note">${icon("sparkles")}Một số tên thương hiệu, đối tác và sự kiện nổi bật xoay quanh HTSC.</p>
+    <section class="section" id="ecosystem">
+      <div class="container ecosystem-panel">
+        <div class="ecosystem-copy">
+          <span class="eyebrow" data-i18n="eyebrow.ecosystem">Hệ sinh thái HTSC</span>
+          <h2 data-i18n="ecosystem.title">Đồng hành cùng các đối tác, hiệp hội và sự kiện công nghệ uy tín.</h2>
+          <p data-i18n="ecosystem.note">HTSC kết nối năng lực AI, an ninh và đô thị thông minh qua các hoạt động hợp tác, triển lãm chuyên ngành và hệ sinh thái công nghệ liên quan.</p>
         </div>
-        <div class="logo-track" aria-label="Hệ sinh thái kết nối của HTSC">
-          <div class="logo-marquee">
-            ${["HTI Group", "Motorola Solutions", "N-TEK Distribution", "VINASA", "Smart City Asia", "Secutech", "BIDV", "Novaland"].concat(["HTI Group", "Motorola Solutions", "N-TEK Distribution", "VINASA"]).map((name) => `<span class="partner-logo">${name}</span>`).join("")}
-          </div>
+        <div class="partner-wall" aria-label="Đối tác, hiệp hội và sự kiện nổi bật của HTSC">
+          ${ecosystemPartners.map((partner) => `
+            <article class="partner-logo-card">
+              <span class="partner-category">${partner.category}</span>
+              <img src="${partner.logo}" alt="${partner.name}" loading="lazy" width="180" height="56">
+            </article>
+          `).join("")}
         </div>
       </div>
     </section>

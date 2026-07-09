@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="72" viewBox="0 0 260 72" role="img" aria-labelledby="title">
+  <title id="title">Secutech</title>
+  <rect width="260" height="72" rx="0" fill="none"/>
+  <path d="M43 18 67 28v17c0 12-9 21-24 27-15-6-24-15-24-27V28z" fill="#F05A28"/>
+  <path d="M34 42h18m-9-9v18" stroke="#fff" stroke-width="5" stroke-linecap="square"/>
+  <text x="82" y="45" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="900" fill="#102033">Secutech</text>
+</svg>

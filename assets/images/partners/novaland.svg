@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="72" viewBox="0 0 260 72" role="img" aria-labelledby="title">
+  <title id="title">Novaland</title>
+  <rect width="260" height="72" rx="0" fill="none"/>
+  <path d="M45 18h16l17 34V18h17v36H69L52 21v33H35V18z" fill="#E21B2D"/>
+  <text x="109" y="45" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="900" fill="#102033">Novaland</text>
+</svg>
